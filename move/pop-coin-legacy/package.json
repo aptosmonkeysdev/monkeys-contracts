@@ -1,0 +1,12 @@
+{
+  "name": "pop-coin",
+  "version": "1.0.0",
+  "scripts": {
+    "move:init": "aptos init",
+    "move:compile": "aptos move compile --package-dir . --named-addresses PopCoin=default",
+    "move:publish": "aptos move publish --included-artifacts none --package-dir . --named-addresses PopCoin=default",
+    "move:test": "aptos move test --package-dir . --named-addresses PopCoin=default",
+    "move:dev": "aptos move publish --included-artifacts none --package-dir . --named-addresses PopCoin=dev --profile=dev"
+  },
+  "dependencies": {}
+}
