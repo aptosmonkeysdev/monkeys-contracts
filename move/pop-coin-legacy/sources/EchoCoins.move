@@ -1093,6 +1093,14 @@ module PopCoin::assets_v1 {
         });
     }
 
+    /**
+    * Prebook a coin symbol
+    * This is used to reserve a symbol for a coin for a fee.
+    * We need this step as only the module that created the coin
+    * can mint it afterwords.
+    * The person that prebooks the coin will be the one defining the
+    * coin parameters (name, symbol, supply, etc.)
+    */
     entry fun prebook_coin<FeeCoinType>(
         sender: &signer,
         name: vector<u8>,
@@ -1131,6 +1139,13 @@ module PopCoin::assets_v1 {
         }
     }
 
+    /**
+    * Create a coin
+    * This is used to create a coin after it has been prebooked
+    * The module owner can create a coin for any prebooked symbol
+    * The coin will be created with the parameters defined by the
+    * prebooker.
+    */
     entry fun create_coin<TargetCoinType>(
         sender: &signer,
         symbol: vector<u8>,
