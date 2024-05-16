@@ -1,0 +1,14 @@
+[package]
+name = "Echo Launchpad"
+version = "1.0.0"
+license = "MIT"
+
+[addresses]
+aptos_framework = "0x1"
+aptos_std="0x1"
+std="0x1"
+Launchpad = "_"
+
+[dependencies]
+AptosFramework = { local = "../../../../aptos-core/aptos-move/framework/aptos-framework" }
+AptosStdlib = { local = "../../../../aptos-core/aptos-move/framework/aptos-stdlib" }

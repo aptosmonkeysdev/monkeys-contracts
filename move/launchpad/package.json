@@ -1,0 +1,11 @@
+{
+  "name": "launchpad",
+  "version": "1.0.0",
+  "scripts": {
+    "move:init": "aptos init",
+    "move:compile": "aptos move compile --package-dir . --named-addresses Launchpad=default",
+    "move:publish": "aptos move publish --included-artifacts none --package-dir . --named-addresses Launchpad=default",
+    "move:test": "aptos move test --package-dir . --named-addresses Launchpad=default"
+  },
+  "dependencies": {}
+}
